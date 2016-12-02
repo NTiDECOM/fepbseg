@@ -26,6 +26,7 @@ public class AutenticacaoControlador {
     @Autowired
     private AutenticacaoServico casServico;
     
+    //exemplo: http://localhost:7004/cas/autenticar/chave=klf78hsd023&cpf=12583661
     @RequestMapping(method = RequestMethod.GET, value="/autenticar/chave={chave}&cpf={cpf}")
     @ResponseBody
     public ResponseEntity<Set<Habilitacao>> autenticar(@PathVariable("chave") String chave, @PathVariable("cpf") String cpf){
